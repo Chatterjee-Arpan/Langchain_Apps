@@ -6,6 +6,8 @@ This repo currently includes two demo apps:
 - **Celebrity Finder** → Multi-step LLMChain pipeline to fetch celebrity details, date of birth, and major world events around that time.  
 - **Conversational Q&A Chatbot** → A memory-enabled chatbot that acts as a helpful fact-checking assistant.
 - **PDF Reader with RAG & Astra DB** → A *Retrieval-Augmented Generation (RAG)* pipeline built with LangChain to query PDFs.
+- **Q&A over Documents with Pinecone** → A *document question-answering pipeline* using LangChain, OpenAI embeddings, and *Pinecone vector database*.
+- **Querying PDFs with FAISS** → A *PDF-based Q&A pipeline* built with LangChain, OpenAI embeddings, and *FAISS* as the vector store.
 
 All apps feature **Streamlit UIs** for easy interaction.  
 
@@ -48,6 +50,30 @@ streamlit run Simple_Chatbot.py
 **Run it:**
 ```bash
 jupyter notebook Pdf_Reader_app_RAG_Astra_DB.ipynb
+```
+### 4. Q&A over Documents with Pinecone (`Q_nd_A_app_Pinecone.ipynb`)
+- A **document question-answering pipeline** using LangChain, OpenAI embeddings, and **Pinecone vector database**.  
+- Loads PDFs from a directory with `PyPDFDirectoryLoader`, then splits them into chunks via **RecursiveCharacterTextSplitter**.  
+- Embeds text chunks using **OpenAI embeddings** and stores them in **Pinecone** for semantic search.  
+- Queries are matched against the vector store, and results are fed into `ChatOpenAI` to generate precise answers.  
+- Demonstrates a scalable RAG workflow for **multi-document semantic search and Q&A**.  
+
+**Run it:**
+```bash
+jupyter notebook Q_nd_A_app_Pinecone.ipynb
+```
+
+### 5. Querying PDFs with FAISS (`querying_pdfs.ipynb`)
+- A **PDF-based Q&A pipeline** built with LangChain, OpenAI embeddings, and **FAISS** as the vector store.  
+- Loads PDF documents with **PyPDF2** and extracts the raw text.  
+- Splits text into manageable chunks using **CharacterTextSplitter** to ensure efficient token usage.  
+- Creates embeddings via **OpenAI embeddings** and stores them in a **FAISS index** for fast similarity search.  
+- Enables natural language queries over the PDF content by retrieving relevant chunks and passing them to the LLM.  
+- Demonstrates a lightweight local RAG workflow without external database dependencies.  
+
+**Run it:**
+```bash
+jupyter notebook querying_pdfs.ipynb
 ```
 
 ### Future Work
