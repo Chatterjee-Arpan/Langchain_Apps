@@ -25,6 +25,7 @@ All apps feature **Streamlit UIs** for easy interaction.
 **Run it:**  
 ```bash
 streamlit run Celeb_finder.py
+```
 
 ### 2. Conversational Q&A Chatbot (`Chatbot.py`)
 - A **fact-checking conversational assistant** powered by `ChatOpenAI (gpt-3.5-turbo)`.
@@ -35,6 +36,7 @@ streamlit run Celeb_finder.py
 **Run it:**
 ```bash
 streamlit run Simple_Chatbot.py
+```
 
 ### 3. PDF Reader with RAG & Astra DB (`Pdf_Reader_app_RAG_Astra_DB.ipynb`)
 - A **Retrieval-Augmented Generation (RAG) pipeline** built with LangChain to query PDFs.  
@@ -46,6 +48,7 @@ streamlit run Simple_Chatbot.py
 **Run it:**
 ```bash
 jupyter notebook Pdf_Reader_app_RAG_Astra_DB.ipynb
+```
 
 ### Future Work
 
