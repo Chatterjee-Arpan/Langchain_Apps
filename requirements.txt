@@ -1,0 +1,10 @@
+openai
+langchain
+langchain-community
+langchain-openai
+python-dotenv
+cassio
+datasets
+tiktoken
+ipykernel
+PyPDF2
