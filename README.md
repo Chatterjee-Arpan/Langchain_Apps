@@ -27,7 +27,7 @@ All apps feature **Streamlit UIs** for easy interaction.
 streamlit run Celeb_finder.py
 ```
 
-### 2. Conversational Q&A Chatbot (`Chatbot.py`)
+### 2. Conversational Q&A Chatbot (`Simple_Chatbot.py`)
 - A **fact-checking conversational assistant** powered by `ChatOpenAI (gpt-3.5-turbo)`.
 - Maintains **conversation flow** using LangChain `SystemMessage`, `HumanMessage`, and `AIMessage`.
 - Session memory is handled with `st.session_state` so the chatbot remembers the full dialogue.
